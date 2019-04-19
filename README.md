@@ -90,7 +90,7 @@ Three directories
 chr21_gtf  chr2_gtf  chr3_gtf
 ~~~
 
-Every directory should contained a file containing information of a particular chromosoe, like this:  
+Every directory should contained a file with information about a particular chromosome, like this:  
 ```bash
 [c177-t0@n9998 ~]$ head chr21_gtf/chr21.gtf
 ```
