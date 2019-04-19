@@ -2,7 +2,7 @@
 
 ## The deadline to turning this homework is **Monday at 11:00:00pm**   
 
-In this homework you will work with the file `hg19.gtf` loacted at `~/classdata`. This is a simple tab-delimited text file for describing genomic features and 
+In this homework you will work with the file `hg19.gtf` located at `~/classdata`. This is a simple tab-delimited text file for describing genomic features and 
 consists of one line per feature, each containing 9 columns of data:  
 
 - **seqname**: name of the chromosome or scaffold; chromosome names can be given with or without the 'chr' prefix. Important note: the seqname must be one used within Ensembl, i.e. a standard chromosome name or an Ensembl identifier such as a scaffold ID, without any additional content such as species or assembly. See the example GFF output below.  
@@ -15,6 +15,7 @@ consists of one line per feature, each containing 9 columns of data:
 - **frame**: One of '0', '1' or '2'. '0' indicates that the first base of the feature is the first base of a codon, '1' that the second base is the first base of a codon, and so on..  
 - **attribute**: A semicolon-separated list of tag-value pairs, providing additional information about each feature.  
 
+First copy the file `hg19.gtf` located at `~/classdata` into your `HOME` directory. 
 Let's look at the file:  
 ```bash
 [c177-t0@n9998 ~]$ head less
