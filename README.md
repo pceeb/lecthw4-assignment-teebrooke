@@ -45,8 +45,8 @@ chr21
 chr3
 ~~~
 
-Supose you want to create a file with information related to `chr2`. So the first thing 
-you may want to do is to print lines with 'grep' containing the field `chr2`. To evalueate if `grep` is doing the job you can
+Supose you want to create a file with information related to `chr2`. First you may 
+want to use `grep` to show only the lines that have the field `chr2`. To evaluate if `grep` is doing the job you can
 summarize the output with a combination of 
 `cut` to display only the 1st column and `uniq` to display unique values.  
 
@@ -58,7 +58,7 @@ chr2
 chr21
 ~~~
 
-The problem with the code above is that is taking both "chr2" and "chr21". To solve this we can do:  
+The problem with the code above is that is taking both "chr2" and "chr21". To solve this you can do:  
 
 ```bash
 [c177-t0@n9998  ~]$ grep -P "chr2\t" hg19.gtf | cut -f 1 | uniq
