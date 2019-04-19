@@ -3,24 +3,24 @@
 
 ## The deadline to turning this homework is **Monday at 11:00:00pm**   
 
-In this homework you will work with the hg19.gtf file. This is a simple tab-delimited text file for describing genomic features and 
+In this homework you will work with the file `hg19.gtf` loacted at `~/classdata`. This is a simple tab-delimited text file for describing genomic features and 
 consists of one line per feature, each containing 9 columns of data:  
 
-seqname - name of the chromosome or scaffold; chromosome names can be given with or without the 'chr' prefix. Important note: the seqname must be one used within Ensembl, i.e. a standard chromosome name or an Ensembl identifier such as a scaffold ID, without any additional content such as species or assembly. See the example GFF output below.  
-source - name of the program that generated this feature, or the data source (database or project name)  
-feature - feature type name, e.g. Gene, Variation, Similarity  
-start - Start position of the feature, with sequence numbering starting at 1.  
-end - End position of the feature, with sequence numbering starting at 1.  
-score - A floating point value.  
-strand - defined as + (forward) or - (reverse).  
-frame - One of '0', '1' or '2'. '0' indicates that the first base of the feature is the first base of a codon, '1' that the second base is the first base of a codon, and so on..  
-attribute - A semicolon-separated list of tag-value pairs, providing additional information about each feature.  
+- **seqname**: name of the chromosome or scaffold; chromosome names can be given with or without the 'chr' prefix. Important note: the seqname must be one used within Ensembl, i.e. a standard chromosome name or an Ensembl identifier such as a scaffold ID, without any additional content such as species or assembly. See the example GFF output below.  
+- **source**: name of the program that generated this feature, or the data source (database or project name)  
+- **feature**: feature type name, e.g. Gene, Variation, Similarity  
+- **start**: Start position of the feature, with sequence numbering starting at 1.  
+- **end**: End position of the feature, with sequence numbering starting at 1.  
+- **score**: A floating point value.  
+- **strand**: defined as + (forward) or - (reverse).  
+- **frame**: One of '0', '1' or '2'. '0' indicates that the first base of the feature is the first base of a codon, '1' that the second base is the first base of a codon, and so on..  
+- **attribute**: A semicolon-separated list of tag-value pairs, providing additional information about each feature.  
 
 Let's look at the file:  
 ~~~
 [c177-t0@n9998 ~]$ head less
 ~~~
-{.  .language-bash}
+{:  .language-bash}
 ~~~
 chr2	hg18_knownGene_GnfAtlas2	exon	31608	31627	0.000000	-	.	gene_id "DUMMYCLUSTER.1"; transcript_id "uc002qvt.1";
 chr2	hg18_knownGene_GnfAtlas2	exon	35440	36385	0.000000	-	.	gene_id "DUMMYCLUSTER.1"; transcript_id "uc002qvt.1";
@@ -39,7 +39,7 @@ This file contains information related to three different chromosomes.
 ~~~
 [c177-t0@n9998 ~]$ cut -f 1 hg19.gtf | uniq
 ~~~
-{.  .language-bash}
+{:  .language-bash}
 ~~~
 chr2
 chr21
@@ -54,7 +54,7 @@ summarize the output with a combination of
 ~~~
 [c177-t0@n9998  ~]$ grep "chr2" hg19.gtf | cut -f 1 | uniq
 ~~~
-{.  .language-bash}
+{:  .language-bash}
 ~~~
 chr2
 chr21
@@ -65,7 +65,7 @@ The problem with the code above is that is taking both "chr2" and "chr21". To so
 ~~~
 [c177-t0@n9998  ~]$ grep -P "chr2\t" hg19.gtf | cut -f 1 | uniq
 ~~~
-{.  .language-bash}
+{:  .language-bash}
 ~~~
 chr2
 ~~~
@@ -74,23 +74,24 @@ chr2
 ~~~
 [c177-t0@n9998 ~]$ grep -P "chr2\t" hg19.gtf > <some_file>.gtf
 ~~~
-{.  .language-bash}
-# Considering th einformation aboice, this is **have you have to do for this homework:**  
+{:  .language-bash}
 
-Create a bash script called `Split_GTF.sh`  which will split the `hg19.gtf` into files corresponding to every chr (2,3,21), 
-save every file in separate directory called chr${i}_gtf.  
+
+# What do you have to do?    
+**Create a bash script called `Split_GTF.sh`  which will split the `hg19.gtf` into files corresponding to every chr (2,3,21), 
+save every file in separate directory called chr${i}_gtf.**
 
 Your script should be called like this:  
 ~~~
 sh Split_GTF.sh hg19.gtf   
 ~~~
-{.  .language-bash}
+{:  .language-bash}
 If everything works you should see the following:  
 Three directories  
 ~~~
 [c177-t0@n9998 ~]$ ls -d chr*
 ~~~
-{.  .language-bash}
+{:  .language-bash}
 ~~~
 chr21_gtf  chr2_gtf  chr3_gtf
 ~~~
@@ -99,7 +100,7 @@ Every directory should contained a file containing information of a particular c
 ~~~
 [c177-t0@n9998 ~]$ head chr21_gtf/chr21.gtf
 ~~~
-{.  .language-bash}
+{:  .language-bash}
 ~~~
 chr21	hg18_knownGene_GnfAtlas2	exon	9928614	9928911	0.000000	-	.	gene_id "220205_at"; transcript_id "uc002yip.1";
 chr21	hg18_knownGene_GnfAtlas2	exon	9930696	9930766	0.000000	-	.	gene_id "220205_at"; transcript_id "uc002yip.1";
@@ -115,7 +116,7 @@ chr21	hg18_knownGene_GnfAtlas2	exon	9956808	9956868	0.000000	-	.	gene_id "220205
 ~~~
 [c177-t0@n9998 ~]$ head chr2_gtf/chr2.gtf
 ~~~
-{.  .language-bash}
+{:  .language-bash}
 ~~~
 chr2	hg18_knownGene_GnfAtlas2	exon	31608	31627	0.000000	-	.	gene_id "DUMMYCLUSTER.1"; transcript_id "uc002qvt.1";
 chr2	hg18_knownGene_GnfAtlas2	exon	35440	36385	0.000000	-	.	gene_id "DUMMYCLUSTER.1"; transcript_id "uc002qvt.1";
@@ -131,7 +132,7 @@ chr2	hg18_knownGene_GnfAtlas2	exon	237538	237602	0.000000	-	.	gene_id "204019_s_
 ~~~
 [c177-t0@n9998 ~]$ head chr3_gtf/chr3.gtf
 ~~~
-{.  .language-bash}
+{:  .language-bash}
 ~~~
 chr3	hg18_knownGene_GnfAtlas2	exon	213650	213746	0.000000	+	.	gene_id "204591_at"; transcript_id "uc003bot.1";
 chr3	hg18_knownGene_GnfAtlas2	exon	261296	261375	0.000000	+	.	gene_id "204591_at"; transcript_id "uc003bot.1";
