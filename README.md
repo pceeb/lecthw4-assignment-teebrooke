@@ -17,11 +17,11 @@ consists of one line per feature, each containing 9 columns of data:
 - **attribute**: A semicolon-separated list of tag-value pairs, providing additional information about each feature.  
 
 Let's look at the file:  
-~~~
+```bash
 [c177-t0@n9998 ~]$ head less
-~~~
-{:  .language-bash}
-~~~
+```
+
+```
 chr2	hg18_knownGene_GnfAtlas2	exon	31608	31627	0.000000	-	.	gene_id "DUMMYCLUSTER.1"; transcript_id "uc002qvt.1";
 chr2	hg18_knownGene_GnfAtlas2	exon	35440	36385	0.000000	-	.	gene_id "DUMMYCLUSTER.1"; transcript_id "uc002qvt.1";
 chr2	hg18_knownGene_GnfAtlas2	exon	229563	232178	0.000000	-	.	gene_id "DUMMYCLUSTER.1"; transcript_id "uc002qwb.2";
@@ -32,14 +32,13 @@ chr2	hg18_knownGene_GnfAtlas2	exon	221023	221191	0.000000	-	.	gene_id "204019_s_
 chr2	hg18_knownGene_GnfAtlas2	exon	223101	223229	0.000000	-	.	gene_id "204019_s_at"; transcript_id "uc002qvu.1";
 chr2	hg18_knownGene_GnfAtlas2	exon	224160	224272	0.000000	-	.	gene_id "204019_s_at"; transcript_id "uc002qvu.1";
 chr2	hg18_knownGene_GnfAtlas2	exon	237538	237602	0.000000	-	.	gene_id "204019_s_at"; transcript_id "uc002qvu.1";
-~~~
+```
 
 This file contains information related to three different chromosomes.  
 
-~~~
+```bash
 [c177-t0@n9998 ~]$ cut -f 1 hg19.gtf | uniq
-~~~
-{:  .language-bash}
+```
 ~~~
 chr2
 chr21
@@ -51,9 +50,9 @@ you may want to do is to print lines with 'grep' containing the field `chr2`. To
 summarize the output with a combination of 
 `cut` to display only the 1st column and `uniq` to display unique values.  
 
-~~~
+```bash
 [c177-t0@n9998  ~]$ grep "chr2" hg19.gtf | cut -f 1 | uniq
-~~~
+```
 {:  .language-bash}
 ~~~
 chr2
@@ -62,10 +61,9 @@ chr21
 
 The problem with the code above is that is taking both "chr2" and "chr21". To solve this we can do:  
 
-~~~
+```bash
 [c177-t0@n9998  ~]$ grep -P "chr2\t" hg19.gtf | cut -f 1 | uniq
-~~~
-{:  .language-bash}
+```
 ~~~
 chr2
 ~~~
