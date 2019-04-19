@@ -1,4 +1,3 @@
-
 # Homework4. Write a bash script.  
 
 ## The deadline to turning this homework is **Monday at 11:00:00pm**   
@@ -36,7 +35,7 @@ chr2	hg18_knownGene_GnfAtlas2	exon	237538	237602	0.000000	-	.	gene_id "204019_s_
 
 This file contains information related to three different chromosomes.  
 
-```java
+```bash
 [c177-t0@n9998 ~]$ cut -f 1 hg19.gtf | uniq
 ```
 ~~~
@@ -50,7 +49,7 @@ you may want to do is to print lines with 'grep' containing the field `chr2`. To
 summarize the output with a combination of 
 `cut` to display only the 1st column and `uniq` to display unique values.  
 
-```java
+```bash
 [c177-t0@n9998  ~]$ grep "chr2" hg19.gtf | cut -f 1 | uniq
 ```
 ~~~
@@ -68,7 +67,7 @@ chr2
 ~~~
 `-P` allows grep to read `\t` as an actual tab. Nice! Now we can create a file that contains only information of `chr2`
 
-```java
+```bash
 [c177-t0@n9998 ~]$ grep -P "chr2\t" hg19.gtf > <some_file>.gtf
 ```
 
@@ -78,25 +77,22 @@ chr2
 save every file in separate directory called chr${i}_gtf.**
 
 Your script should be called like this:  
-~~~
+```bash
 sh Split_GTF.sh hg19.gtf   
-~~~
-{:  .language-bash}
+```
 If everything works you should see the following:  
 Three directories  
-~~~
+```bash
 [c177-t0@n9998 ~]$ ls -d chr*
-~~~
-{:  .language-bash}
+```
 ~~~
 chr21_gtf  chr2_gtf  chr3_gtf
 ~~~
 
 Every directory should contained a file containing information of a particular chromosoe, like this:  
-~~~
+```bash
 [c177-t0@n9998 ~]$ head chr21_gtf/chr21.gtf
-~~~
-{:  .language-bash}
+```
 ~~~
 chr21	hg18_knownGene_GnfAtlas2	exon	9928614	9928911	0.000000	-	.	gene_id "220205_at"; transcript_id "uc002yip.1";
 chr21	hg18_knownGene_GnfAtlas2	exon	9930696	9930766	0.000000	-	.	gene_id "220205_at"; transcript_id "uc002yip.1";
@@ -109,10 +105,9 @@ chr21	hg18_knownGene_GnfAtlas2	exon	9955723	9955811	0.000000	-	.	gene_id "220205
 chr21	hg18_knownGene_GnfAtlas2	exon	9955910	9955991	0.000000	-	.	gene_id "220205_at"; transcript_id "uc002yip.1";
 chr21	hg18_knownGene_GnfAtlas2	exon	9956808	9956868	0.000000	-	.	gene_id "220205_at"; transcript_id "uc002yip.1";
 ~~~
-~~~
+```bash
 [c177-t0@n9998 ~]$ head chr2_gtf/chr2.gtf
-~~~
-{:  .language-bash}
+```
 ~~~
 chr2	hg18_knownGene_GnfAtlas2	exon	31608	31627	0.000000	-	.	gene_id "DUMMYCLUSTER.1"; transcript_id "uc002qvt.1";
 chr2	hg18_knownGene_GnfAtlas2	exon	35440	36385	0.000000	-	.	gene_id "DUMMYCLUSTER.1"; transcript_id "uc002qvt.1";
@@ -125,10 +120,9 @@ chr2	hg18_knownGene_GnfAtlas2	exon	223101	223229	0.000000	-	.	gene_id "204019_s_
 chr2	hg18_knownGene_GnfAtlas2	exon	224160	224272	0.000000	-	.	gene_id "204019_s_at"; transcript_id "uc002qvu.1";
 chr2	hg18_knownGene_GnfAtlas2	exon	237538	237602	0.000000	-	.	gene_id "204019_s_at"; transcript_id "uc002qvu.1";
 ~~~
-~~~
+```bash
 [c177-t0@n9998 ~]$ head chr3_gtf/chr3.gtf
-~~~
-{:  .language-bash}
+```
 ~~~
 chr3	hg18_knownGene_GnfAtlas2	exon	213650	213746	0.000000	+	.	gene_id "204591_at"; transcript_id "uc003bot.1";
 chr3	hg18_knownGene_GnfAtlas2	exon	261296	261375	0.000000	+	.	gene_id "204591_at"; transcript_id "uc003bot.1";
