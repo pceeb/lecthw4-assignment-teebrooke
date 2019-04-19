@@ -36,7 +36,7 @@ chr2	hg18_knownGene_GnfAtlas2	exon	237538	237602	0.000000	-	.	gene_id "204019_s_
 
 This file contains information related to three different chromosomes.  
 
-```bash
+```java
 [c177-t0@n9998 ~]$ cut -f 1 hg19.gtf | uniq
 ```
 ~~~
@@ -50,10 +50,9 @@ you may want to do is to print lines with 'grep' containing the field `chr2`. To
 summarize the output with a combination of 
 `cut` to display only the 1st column and `uniq` to display unique values.  
 
-```bash
+```java
 [c177-t0@n9998  ~]$ grep "chr2" hg19.gtf | cut -f 1 | uniq
 ```
-{:  .language-bash}
 ~~~
 chr2
 chr21
@@ -69,10 +68,9 @@ chr2
 ~~~
 `-P` allows grep to read `\t` as an actual tab. Nice! Now we can create a file that contains only information of `chr2`
 
-~~~
+```java
 [c177-t0@n9998 ~]$ grep -P "chr2\t" hg19.gtf > <some_file>.gtf
-~~~
-{:  .language-bash}
+```
 
 
 # What do you have to do?    
