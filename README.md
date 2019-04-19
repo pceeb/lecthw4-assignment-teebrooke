@@ -1,6 +1,6 @@
 # Homework4. Write a bash script.  
 
-## The deadline to turning this homework is **Monday at 11:00:00pm**   
+## The deadline to turning this homework is **Wednesday at 11:00:00pm**   
 
 In this homework you will work with the file `hg19.gtf` located at `~/classdata`. This is a simple tab-delimited text file for describing genomic features and 
 consists of one line per feature, each containing 9 columns of data:  
@@ -90,7 +90,7 @@ Three directories
 chr21_gtf  chr2_gtf  chr3_gtf
 ~~~
 
-Every directory should contained a file containing information of a particular chromosoe, like this:  
+Every directory should contained a file with information about a particular chromosome, like this:  
 ```bash
 [c177-t0@n9998 ~]$ head chr21_gtf/chr21.gtf
 ```
