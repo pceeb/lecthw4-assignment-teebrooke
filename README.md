@@ -74,7 +74,7 @@ chr2
 
 
 # What do you have to do?    
-**Create a bash script called `Split_GTF.sh`  which will split the `hg19.gtf` into files corresponding to every chr (2,3,21), 
+**Create a bash script called `Split_GTF.sh` which will split the `hg19.gtf` into files corresponding to every chr (2,3,21), 
 save every file in separate directory called chr${i}_gtf.**
 
 Your script should be called like this:  
