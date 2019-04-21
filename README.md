@@ -143,8 +143,8 @@ Include the scripts `Split_GTF.sh` in this repository.
 # Grade HW4
 
 | **Rubric** | **5pt** | **4pt** | **3pt** | **2pt** | **1pt** |
-|---|---|---|---|---|
-| In-Lab work |   |   |   |	|
-| Effort challenge|   |   |   |   |
-| Accuracy challenge |   |   |   |   |
-| Timely Submission |   |   |   |   |
+| --- | ---| --- | --- | --- | --- |
+| In-Lab work | | | | |
+| Effort challenge | | | | |
+| Accuracy challenge | | | | |
+| Timely Submission | | | | |
