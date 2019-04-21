@@ -148,4 +148,3 @@ Include the scripts `Split_GTF.sh` in this repository.
 | Challenge - Effort | **X** | | | |
 | Challenge - Accuracy | **X** | | | |
 | Challenge - Timely Submission | **X** | | | |
-| Challenge - BONUS | **X** | | | |
