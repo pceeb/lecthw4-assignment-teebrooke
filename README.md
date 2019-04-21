@@ -140,11 +140,11 @@ chr3	hg18_knownGene_GnfAtlas2	exon	366042	366226	0.000000	+	.	gene_id "204591_at
 # How to submit your Homework. 
 Include the scripts `Split_GTF.sh` in this repository.  
 
-# Grade HW4
+## Grade HW4: 20/20
 
 | **Rubric** | **5pt** | **4pt** | **3pt** | **2pt** | **1pt** |
 | --- | ---| --- | --- | --- | --- |
-| In-Lab work | | | | |
-| Effort challenge | | | | |
-| Accuracy challenge | | | | |
-| Timely Submission | | | | |
+| In-Lab work | **X** | | | |
+| Effort challenge | **X** | | | |
+| Accuracy challenge | **X** | | | |
+| Timely Submission | **X** | | | |
